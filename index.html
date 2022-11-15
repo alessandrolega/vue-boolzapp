@@ -11,8 +11,68 @@
 </head>
 <body>
     <div id="app" class="vh-100 d-flex justify-content-center align-items-center">
+        <!--MAIN BOX-->
         <div class="mainbox d-flex">
-            
+            <!--DIVISIONE COLONNE CONTATTI E CHAT-->
+            <div class="sez-contatti">
+                <!--HEADER COL - CONTATTI-->
+                <div class="contatti-head d-flex justify-content-between align-items-center p-1 border-end">
+                    <div class="img-div p-2">
+                        <img src="./assets/img/avatar_io.jpg" alt="avatar_io">
+                        <span class="align-middle fw-bold p-1">Sofia</span>
+                    </div>
+                    <div class="icon-cont d-flex p-4">
+                        <i class="fa-solid fa-circle-notch px-2"></i>
+                        <i class="fa-solid fa-message px-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                    </div>
+                </div>
+                <!--SEZIONE ATTIVA NOTIFICHE-->
+                <div class="sez-notifiche azure-bg d-flex align-items-center">
+                    <div class="icon-bell-cont p-3">
+                        <div class="bg-white rounded-circle bell-cont d-flex justify-content-center align-items-center p-2">
+                            <div class="lightblue-color">
+                                <i class="fa-solid fa-bell-slash fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-not">
+                        <span class="fw-bold">Ricevi notifiche di nuovi messaggi</span>
+                        <span class="d-block"><a href="#">Attiva notifiche desktop</a></span>
+                    </div>
+                </div>
+                <!--BARRA DI RICERCA CONTATTI-->
+                <div class="bg-white">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+            </div>
+
+            <!--SEZIONE CHAT-->
+            <div class="sez-chat">
+                <div class="chat-head d-flex justify-content-between align-items-center pt-2 px-2">
+                    <div class="img-div-chat d-flex align-items-center">
+                        <img src="./assets/img/avatar_1.jpg" alt="avatar_1">
+                        <div class="px-4">
+                            <span>Michele</span>
+                            <span class="d-block">Ultimo Accesso oggi alle 12:00</span>
+                        </div>
+                    </div>
+                    <div class="chat-icon-head d-flex align-items-center p-4">
+                        <i class="fa-solid fa-magnifying-glass px-2"></i>
+                        <i class="fa-solid fa-paperclip px-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
 
         </div>
        
