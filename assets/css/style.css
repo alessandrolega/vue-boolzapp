@@ -1,0 +1,15 @@
+body {
+    background: rgb(0, 168, 132);
+    background: linear-gradient(0deg, rgb(236, 229, 221) 85%, rgb(18, 140, 126) 10%);
+  }
+
+.vh-100{
+    background-color: red;
+}
+
+.mainbox{
+    width: 75%;
+    height: 90%;
+    background-color: antiquewhite;
+}
+
