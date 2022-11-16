@@ -1,32 +1,44 @@
-body {
+body{
     background: rgb(0, 168, 132);
-    background: linear-gradient(0deg, rgb(236, 229, 221) 85%, rgb(18, 140, 126) 10%);
-  }
+    background: linear-gradient(0deg, #dcdbd1 85%, rgb(18, 140, 126) 10%);
+}
 
-.mainbox{
+.main-box{
     width: 75%;
     height: 90%;
-    background-color: antiquewhite;
 }
 
-.sez-contatti{
+.colonna-contatti{
     flex-basis: 30%;
+    background-color: white;
 }
 
-.sez-chat{
+.colonna-chat{
     flex-basis: 70%;
-    background-color: darkkhaki;
 }
 
-.img-div > img{
-    width: 17%;
-    border-radius: 50%;
+.chat-head{
+    height: 10%;
 }
 
-.contatti-head{
+.chat-main{
+    height: 80%;
+}
+
+.chat-footer{
+    height: 10%;
+    background-color: #F3EEEA;
+}
+
+.contact-head{
+    height: 10%;
     background-color: #EAEAEA;
 }
 
+.img-div > img{
+    width: 20%;
+    border-radius: 50%;
+}
 .icon-cont{
     color: #B1B1B1;
 }
@@ -43,9 +55,12 @@ body {
 .lightblue-color{
     color: #8EDAFC;
 }
-
 a{
     color: grey;
+}
+
+.chat-head{
+    background-color: #EAEAEA;
 }
 
 .img-div-chat > img{
@@ -53,7 +68,27 @@ a{
     border-radius: 50%;
 }
 
-.chat-head{
-    background-color: #EAEAEA;
+.chat-main{
+    background-image: url('../img/mine.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.sent {
+    width: fit-content;
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.received {
+    width: fit-content;
+    background-color: white;
+}
+
+.w-100{
+    width: 100%;
+}
+
+
+
 
