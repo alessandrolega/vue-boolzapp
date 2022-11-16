@@ -22,9 +22,9 @@
                         <span class="align-middle fw-semibold p-1">Sofia</span>
                     </div>
                     <div class="icon-cont d-flex p-4">
-                        <i class="fa-solid fa-circle-notch px-2"></i>
-                        <i class="fa-solid fa-message px-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                        <i class="fa-solid fa-circle-notch px-2 cursor-pointer"></i>
+                        <i class="fa-solid fa-message px-2 cursor-pointer"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-2 cursor-pointer"></i>
                     </div>
                 </div>
                 <!--SEZIONE ATTIVA NOTIFICHE-->
@@ -52,15 +52,15 @@
                 <div v-for="(element,index) in contacts">
                     <div
                         class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img :src="(element.avatar)" alt="user" class="avatarCustomH rounded-circle"> 
+                        <div class="d-flex align-items-center cursor-pointer2 cursor-pointer">
+                            <img class="img-contacts" :src="'./assets/img/avatar' + element.avatar +'.jpg'" alt="user" class="avatarCustomH rounded-circle"> 
                             <div class="">
                                 <p class="m-0"> {{element.name}}</p> 
                                 <p class="m-0">Ultimo messaggio inviato</p>
                             </div>
                         </div>
                         <div class="align-self-start">
-                            <h9>12:00</h9>
+                            <p>12:00</p>
                         </div>
                     </div>
                 </div>
@@ -77,9 +77,9 @@
                         </div>
                     </div>
                     <div class="icon-cont d-flex align-items-center p-4">
-                        <i class="fa-solid fa-magnifying-glass px-2"></i>
-                        <i class="fa-solid fa-paperclip px-2"></i>
-                        <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                        <i class="fa-solid fa-magnifying-glass px-2 cursor-pointer"></i>
+                        <i class="fa-solid fa-paperclip px-2 cursor-pointer"></i>
+                        <i class="fa-solid fa-ellipsis-vertical px-2 cursor-pointer"></i>
                     </div>
                 </div>
                 <!--CHAT MAIN-->
@@ -97,15 +97,16 @@
                     </div>
                 </div>
                 <!--CHAT FOOTER-->
-                <div class="chat-footer d-flex justify-content-between align-items-center p-4">
+                <div class="chat-footer d-flex justify-content-between align-items-center p-2">
                     <div>
-                        <i class="fa-regular fa-face-smile fa-2x icon-cont"></i>
+                        <i class="fa-regular fa-face-smile fa-2x icon-cont cursor-pointer"></i>
                     </div>
+                    <div class="input-group flex-nowrap">
+                        
+                        <input type="text" class="form-control input-message" placeholder="Scrivi il tuo messaggio" aria-label="Username" aria-describedby="addon-wrapping">
+                      </div>
                     <div>
-                        <input type="text" class="w-100 p-2" placeholder="Scrivi un messaggio">
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-microphone fa-2x icon-cont"></i>
+                        <i class="fa-solid fa-microphone fa-2x cursor-pointer icon-cont"></i>
                     </div>
                 </div>
             </div>
