@@ -70,8 +70,7 @@ a{
 
 .chat-main{
     background-image: url('../img/mine.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 }
 
 .sent {
@@ -89,6 +88,22 @@ a{
     width: 100%;
 }
 
+.img-contacts{
+    width: 13%;
+    border-radius: 50%;
+}
 
+.input-message{
+    border: none;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.cursor-pointer2:hover{
+    background-color: #B1B1B1;
+
+}
 
 
