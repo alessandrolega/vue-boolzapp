@@ -7,19 +7,19 @@
     <title>Boolzapp</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
 <body>
     <div id="app" class="vh-100 d-flex justify-content-center align-items-center">
-        <!--MAIN BOX-->
-        <div class="mainbox d-flex">
-            <!--DIVISIONE COLONNE CONTATTI E CHAT-->
-            <div class="sez-contatti">
-                <!--HEADER COL - CONTATTI-->
-                <div class="contatti-head d-flex justify-content-between align-items-center p-1 border-end">
+        <!--MAIN DIV APP-->
+        <div class="main-box d-flex">
+            <!--DIVISIONE DUE COLONNE-->
+            <!--COLONNA CONTATTI-->
+            <div class="colonna-contatti">
+                <div class="contact-head d-flex justify-content-between align-items-center p-1 border-end">
                     <div class="img-div p-2">
                         <img src="./assets/img/avatar_io.jpg" alt="avatar_io">
-                        <span class="align-middle fw-bold p-1">Sofia</span>
+                        <span class="align-middle fw-semibold p-1">Sofia</span>
                     </div>
                     <div class="icon-cont d-flex p-4">
                         <i class="fa-solid fa-circle-notch px-2"></i>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="text-not">
-                        <span class="fw-bold">Ricevi notifiche di nuovi messaggi</span>
+                        <span class="fw-semibold">Ricevi notifiche di nuovi messaggi</span>
                         <span class="d-block"><a href="#">Attiva notifiche desktop</a></span>
                     </div>
                 </div>
@@ -48,41 +48,76 @@
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
                       </div>
                 </div>
+                <!--CONTATTI CICLATI-->
+                <div v-for="(element,index) in contacts">
+                    <div
+                        class="d-flex flex-row align-items-center p-2 border-bottom justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img :src="(element.avatar)" alt="user" class="avatarCustomH rounded-circle"> 
+                            <div class="">
+                                <p class="m-0"> {{element.name}}</p> 
+                                <p class="m-0">Ultimo messaggio inviato</p>
+                            </div>
+                        </div>
+                        <div class="align-self-start">
+                            <h9>12:00</h9>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!--SEZIONE CHAT-->
-            <div class="sez-chat">
+            <!--COLONNA CHAT-->
+            <div class="colonna-chat">
+                <!--CHAT HEADER-->
                 <div class="chat-head d-flex justify-content-between align-items-center pt-2 px-2">
                     <div class="img-div-chat d-flex align-items-center">
                         <img src="./assets/img/avatar_1.jpg" alt="avatar_1">
                         <div class="px-4">
-                            <span>Michele</span>
+                            <span class="fw-semibold">Michele</span>
                             <span class="d-block">Ultimo Accesso oggi alle 12:00</span>
                         </div>
                     </div>
-                    <div class="chat-icon-head d-flex align-items-center p-4">
+                    <div class="icon-cont d-flex align-items-center p-4">
                         <i class="fa-solid fa-magnifying-glass px-2"></i>
                         <i class="fa-solid fa-paperclip px-2"></i>
                         <i class="fa-solid fa-ellipsis-vertical px-2"></i>
-
-
                     </div>
-
-
                 </div>
-
-
+                <!--CHAT MAIN-->
+                <div class="chat-main d-flex flex-column">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex sent rounded-3 m-3 p-3 align-items-end">
+                            <p class="m-0">Hai portato a spasso il cane?</p>
+                        </div>
+                        <div class="d-flex sent rounded-3 m-3 p-3">
+                            <p class="m-0">Ricordati di stendere i panni</p>
+                        </div>
+                        <div class="d-flex received rounded-3 m-3 p-3">
+                            <p class="m-0">Tutto fatto!</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CHAT FOOTER-->
+                <div class="chat-footer d-flex justify-content-between align-items-center p-4">
+                    <div>
+                        <i class="fa-regular fa-face-smile fa-2x icon-cont"></i>
+                    </div>
+                    <div>
+                        <input type="text" class="w-100 p-2" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-microphone fa-2x icon-cont"></i>
+                    </div>
+                </div>
             </div>
-
         </div>
-       
     </div>
-    
     <!--BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--VUE-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!--MIO JS-->
     <script type="text/javascript" src="./assets/js/main.js"></script>
+
+    
 </body>
 </html>
