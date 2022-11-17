@@ -70,7 +70,7 @@
                 <!--CHAT HEADER-->
                 <div class="chat-head d-flex justify-content-between align-items-center pt-2 px-2">
                     <div class="img-div-chat d-flex align-items-center">
-                        <img :src="'assets/img/avatar' + contacts[indiceDinamico].avatar + '.jpg'" alt="avatar_1">
+                        <img :src="'./assets/img/avatar' + contacts[indiceDinamico].avatar + '.jpg'" alt="avatar_1">
                         <div class="px-4">
                             <span class="fw-semibold">{{ contacts[indiceDinamico].name}}</span>
                             <span class="d-block">Ultimo Accesso oggi alle 12:00</span>
@@ -84,15 +84,20 @@
                 </div>
                 <!--CHAT MAIN-->
                 <div class="chat-main d-flex flex-column">
-                    <div class="d-flex flex-column">
-                        <div class="d-flex sent rounded-3 m-3 p-3 align-items-end">
-                            <p class="m-0">Hai portato a spasso il cane?</p>
-                        </div>
-                        <div class="d-flex sent rounded-3 m-3 p-3">
-                            <p class="m-0">Ricordati di stendere i panni</p>
-                        </div>
-                        <div class="d-flex received rounded-3 m-3 p-3">
-                            <p class="m-0">Tutto fatto!</p>
+                    <div class="d-flex flex-column px-5 py-2">
+                        <div 
+                        v-for="(element, index) in contacts[indiceDinamico].messages" 
+                        :class="(element.status == 'received') ? 'received align-self-start' : 'sent align-self-end'"
+                        >
+                            <!-- proper message -->
+                            <span> 
+                                {{ element.message }} 
+                            </span>
+                            <!-- proper message's hour -->
+                            <!-- <span class="msg-hour"> 
+                                {{ getCurrentTime(element, indiceDinamico) }} 
+
+                            </span> -->
                         </div>
                     </div>
                 </div>
