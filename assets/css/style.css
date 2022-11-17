@@ -76,12 +76,18 @@ a{
 .sent {
     width: fit-content;
     background-color: #d5f9ba;
-    align-self: flex-end;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    
 }
 
 .received {
     width: fit-content;
     background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    
 }
 
 .w-100{
