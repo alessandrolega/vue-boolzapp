@@ -70,7 +70,7 @@
                 <!--CHAT HEADER-->
                 <div class="chat-head d-flex justify-content-between align-items-center pt-2 px-2">
                     <div class="img-div-chat d-flex align-items-center">
-                        <img :src="`${contacts[indiceDinamico].avatar}`" alt="avatar_1">
+                        <img :src="'assets/img/avatar' + contacts[indiceDinamico].avatar + '.jpg'" alt="avatar_1">
                         <div class="px-4">
                             <span class="fw-semibold">{{ contacts[indiceDinamico].name}}</span>
                             <span class="d-block">Ultimo Accesso oggi alle 12:00</span>
