@@ -169,8 +169,8 @@ var app = new Vue({
     },
     methods: {
         openChat(element,index) {
-            this.indiceDinamico == index;
-            console.log(index)
+            this.indiceDinamico = index;
+            console.log(this.indiceDinamico)
         }
 
     }
