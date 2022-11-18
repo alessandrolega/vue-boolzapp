@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         indiceDinamico: 0,
         inputMessage: '',
-        inputSearch: '',
+        inputFilter: '',
 
         contacts: [
             {
@@ -196,8 +196,8 @@ var app = new Vue({
         },
         searchContact(){
             this.contacts.forEach((element, index) => {
-                let x = element.name.toLowerCase();
-                if(x.includes(this.inputSearch.toLowerCase())){
+                let y = element.name.toLowerCase();
+                if(y.includes(this.inputFilter.toLowerCase())){
                      element.visible = true;
                 }else{
                      element.visible = false;
