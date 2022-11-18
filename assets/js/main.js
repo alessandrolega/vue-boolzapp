@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         indiceDinamico: 0,
+        inputMessage: '',
 
         contacts: [
             {
@@ -171,7 +172,26 @@ var app = new Vue({
         openChat(element,index) {
             this.indiceDinamico = index;
             console.log(this.indiceDinamico)
-        }
+        },
+        sendMessage(){
+            let getMessageSent = this.contacts[this.indiceDinamico].messages
+            getMessageSent.push(
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: this.inputMessage,
+                    status: 'sent'
+                },
 
+            )
+            setTimeout( () =>{
+                getMessageSent.push(
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'ok!',
+                        status: 'received'
+                    },
+                )
+            }, 2000)
+        }
     }
 })
