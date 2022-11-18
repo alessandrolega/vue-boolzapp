@@ -89,15 +89,14 @@
                         v-for="(element, index) in contacts[indiceDinamico].messages" 
                         :class="(element.status == 'received') ? 'received align-self-start' : 'sent align-self-end'"
                         >
-                            <!-- proper message -->
+                            
                             <span> 
                                 {{ element.message }} 
                             </span>
-                            <!-- proper message's hour -->
-                            <!-- <span class="msg-hour"> 
-                                {{ getCurrentTime(element, indiceDinamico) }} 
-
+                            <!-- <span>
+                            {{element.date}}
                             </span> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -108,7 +107,10 @@
                     </div>
                     <div class="input-group flex-nowrap">
                         
-                        <input type="text" class="form-control input-message" placeholder="Scrivi il tuo messaggio" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control input-message" placeholder="Scrivi il tuo messaggio"
+                         aria-label="Username" aria-describedby="addon-wrapping"
+                         v-model="inputMessage"
+                         @keyup.enter="sendMessage">
                       </div>
                     <div>
                         <i class="fa-solid fa-microphone fa-2x cursor-pointer icon-cont"></i>
